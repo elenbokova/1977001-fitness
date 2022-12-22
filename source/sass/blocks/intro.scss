@@ -1,0 +1,135 @@
+.intro {
+  padding: 50px 0;
+  background-image: $custom-conic;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 82px 0;
+  }
+
+  @include vp-767 {
+    padding: 110px 0 135px;
+  }
+}
+
+.intro .container {
+  display: flex;
+
+  div {
+    @include vp-1199 {
+      margin-right: 27px;
+    }
+  }
+}
+
+.intro ul {
+  padding: 0;
+  margin: 117px 14px 0 20px;
+  list-style-type: none;
+  text-align: end;
+  align-self: center;
+
+  @include vp-1199 {
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-top: 45px;
+  }
+}
+
+.intro li {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.intro div {
+  text-align: end;
+}
+
+.intro p {
+  margin: 113px 51px 13px 0;
+  font-family: $ff-custom;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    margin-top: 51px;
+    margin-bottom: 4px;
+    margin-right: 0;
+    font-size: 29px;
+    line-height: 41px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.intro h1 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: $ff-custom;
+  font-weight: 800;
+  font-size: 92px;
+  line-height: 110px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: end;
+
+  @include vp-1199 {
+    margin-bottom: 38px;
+    font-size: 72px;
+    line-height: 86px;
+    text-transform: none;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
+}
+
+.intro button {
+  padding: 19px;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: calc(100% - 15px);
+
+  @include vp-1199 {
+    width: calc(100% - 6px);
+  }
+
+  @include vp-767 {
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    padding: 20px;
+  }
+}
+
+.intro img {
+  margin-left: 63px;
+
+  @include vp-1199 {
+    margin-left: 0;
+    max-width: 324px;
+    overflow: hidden;
+    object-fit: cover;
+    aspect-ratio: 324 / 390;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
