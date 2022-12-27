@@ -1,0 +1,288 @@
+.catalog {
+  position: relative;
+  padding: 120px 0 104px;
+  background-color: $color-ghost-white;
+  text-align: center;
+  z-index: 0;
+
+  @include vp-1199 {
+    padding-top: 98px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 50px;
+  }
+
+  img {
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    object-fit: cover;
+    object-position: left center;
+    overflow: hidden;
+    bottom: -150px;
+    right: 0;
+    z-index: -1;
+
+
+    @include vp-1199 {
+      width: 347px;
+      height: 444px;
+      bottom: -126px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.catalog h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $ff-custom;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-left: -15px;
+    margin-bottom: 18px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-left: -10px;
+    margin-bottom: 19px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.catalog ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+[data-tab-controls] {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 343px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  @include vp-1199 {
+    width: 334px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-grey-transparent;
+    bottom: -12px;
+
+    @include vp-1199 {
+      bottom: -14px;
+    }
+  }
+
+  button {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-sapphire-transparent;
+    border: none;
+    background-color: $color-transparent;
+    outline: none;
+    cursor: pointer;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include hover-focus {
+      color: $color-default-navy;
+    }
+  }
+}
+
+[data-tab-control][data-status="active"] {
+  position: relative;
+
+  button {
+    padding: 0;
+    color: $color-default-navy;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-torch-red;
+    bottom: -12px;
+    left: 0;
+
+    @include vp-1199 {
+      bottom: -14px;
+    }
+  }
+}
+
+[data-tab] {
+  display: none;
+}
+
+
+[data-tab][data-status="active"] {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 360px));
+  gap: 3vw;
+  z-index: 1;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+  }
+
+  @include vp-767 {
+    gap: 31px;
+  }
+}
+
+[data-tab] li {
+  padding: 50px 10px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-default-white;
+  border: 7px solid $color-default-white;
+
+  @include vp-1199 {
+    width: 65%;
+    padding-top: 55px;
+    padding-bottom: 52px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 41px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-image: $custom-to-right 1;
+
+    a {
+      color: $color-default-white;
+      background-image: $custom-to-right;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+[data-tab] dl {
+  margin-bottom: 67px;
+
+  @include vp-767 {
+    margin-bottom: 55px;
+  }
+}
+
+[data-tab] dt {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+
+  @include vp-767 {
+    margin-bottom: 9px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+[data-tab] dd {
+  margin: 0;
+}
+
+[data-tab] b {
+  position: relative;
+  display: block;
+  margin-bottom: 33px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: $color-egyptian-blue;
+  z-index: 1;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    top: -24px;
+    left: -20px;
+    font-weight: 700;
+    font-size: 100px;
+    color: $color-whisper;
+    opacity: 0.47;
+    z-index: -1;
+
+    @include vp-767 {
+      top: -46px;
+      left: -16px;
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+}
+
+[data-tab] .button {
+  margin-top: auto;
+  width: 15vw;
+  max-width: 206px;
+  min-height: 66px;
+  line-height: 14px;
+  user-select: none;
+
+  @include vp-1199 {
+    width: 27vw;
+    max-width: none;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 206px;
+  }
+}
+
+[data-tab] svg {
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
+  }
+}

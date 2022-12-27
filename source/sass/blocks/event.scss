@@ -1,0 +1,161 @@
+.event {
+  padding-top: 119px;
+
+  @include vp-1199 {
+    padding-top: 103px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+  }
+}
+
+.event .container {
+  display: grid;
+  grid-template-columns: 43% 57%;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+.event img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: $color-default-navy;
+
+  @include vp-767 {
+    width: 115%;
+    height: 115%;
+    object-position: 48% center;
+    aspect-ratio: 290 / 292;
+  }
+}
+
+.event__info {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-torch-red;
+  color: $color-default-white;
+  padding: 80px 78px 87px;
+
+  @include vp-1199 {
+    padding: 47px 45px 51px;
+  }
+}
+
+.event__heading {
+  display: flex;
+  margin-bottom: 18px;
+
+  @include vp-1199 {
+    margin-bottom: 3px;
+  }
+}
+
+.event__heading h3 {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 4px 0 0 13px;
+  font-family: $ff-custom;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    margin-top: 3px;
+    margin-left: 6px;
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.event__heading dl {
+  margin: 0;
+  margin-left: auto;
+}
+
+.event__heading dt {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1199 {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.event__heading dd {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+
+    @include vp-1199 {
+      margin-bottom: 5px;
+    }
+  }
+
+  time {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  span {
+    position: absolute;
+    padding-left: 7px;
+    font-size: 14px;
+    line-height: 19px;
+
+    @include vp-1199 {
+      padding-left: 5px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+.event__info p {
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1199 {
+    margin-bottom: 29px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 32px;
+  }
+}
+
+.event__info a {
+  width: 100%;
+  min-height: 69px;
+  margin-top: auto;
+  line-height: 14px;
+  user-select: none;
+
+  @include vp-1199 {
+    min-height: 39px;
+    font-size: 10px;
+    line-height: 12px;
+    border-width: 2px;
+  }
+}

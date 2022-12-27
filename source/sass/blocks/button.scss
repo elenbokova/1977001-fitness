@@ -1,8 +1,15 @@
 .button {
   display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
 
   color: $color-default-navy;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   background-color: $color-transparent;
   border-color: $color-default-navy;
@@ -15,6 +22,10 @@
     border: 4px solid $color-default-white;
   }
 
+  &--dark {
+    border: 2px solid $color-default-navy;
+  }
+
   &:disabled {
     opacity: 0.5;
 
@@ -22,7 +33,9 @@
   }
 
   @include hover-focus {
+    color: $color-default-white;
     background-image: $custom-to-right;
+    border: none;
   }
 
   &:active {
