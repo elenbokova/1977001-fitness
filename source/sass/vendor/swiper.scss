@@ -25,7 +25,7 @@
   margin-right: auto;
   position: relative;
   overflow: hidden;
-  list-style: none;
+  //list-style: none;
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
@@ -182,7 +182,6 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
@@ -209,23 +208,23 @@
   font-variant: initial;
   line-height: 1;
 }
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: 10px;
-  right: auto;
-}
+// .swiper-button-prev,
+// .swiper-rtl .swiper-button-next {
+//   left: -2px;
+//   right: auto;
+// }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: '';
 }
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: 10px;
-  left: auto;
-}
+// .swiper-button-next,
+// .swiper-rtl .swiper-button-prev {
+//   right: -2px;
+//   left: auto;
+// }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: '';
 }
 .swiper-button-lock {
   display: none;

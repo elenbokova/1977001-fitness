@@ -33,9 +33,7 @@
   }
 
   @include hover-focus {
-    color: $color-default-white;
-    background-image: $custom-to-right;
-    border: none;
+    opacity: 0.8;
   }
 
   &:active {

@@ -1,0 +1,227 @@
+.benefits {
+  padding: 144px 0 88px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding: 91px 0;
+  }
+
+  @include vp-767 {
+    padding: 65px 0 58px;
+  }
+}
+
+.benefits .container {
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.benefits h2 {
+  margin: 0 0 52px 10px;
+  font-family: $ff-custom;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @include vp-1199 {
+    margin: 0 0 43px -23px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-left: -17px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.benefits__list {
+  margin: 0 auto;
+  padding: 0 60px 0 80px;
+  display: grid;
+  grid-template-columns: 321px auto 340px;
+  column-gap: 60px;
+  grid-auto-rows: minmax(157px, auto);
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    column-gap: 30px;
+    grid-auto-rows: minmax(121px, auto);
+  }
+
+  @include vp-767 {
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.benefits dl {
+  position: relative;
+  margin: 0;
+  display: flex;
+
+  @include vp-767 {
+    padding: 0 45px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &:last-child,
+  &:nth-last-child(2) {
+    align-items: end;
+
+    @include vp-767 {
+      align-items: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 340px;
+      height: 2px;
+      background-color: $color-crimson-transparent;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-last-child(2) {
+    &::before {
+      left: -20px;
+    }
+  }
+}
+
+.benefits dt {
+  margin-right: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  background-clip: text;
+  color: transparent;
+  background-image: $custom-blue-to-left;
+
+  @include vp-767 {
+    margin: 0;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+}
+
+.benefits span {
+  display: block;
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 59px;
+
+  @include vp-1199 {
+    font-size: 58px;
+  }
+
+  @include vp-767 {
+    line-height: 54px;
+  }
+}
+
+.benefits dd {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.benefits b {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 1px;
+  }
+}
+
+.benefits .benefits__central-item {
+  margin: 5px 0;
+  padding: 0 20px;
+  height: calc(100% - 10px);
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: $color-resolution-blue;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    height: 100%;
+    margin: 0 120px;
+    padding: 35px 120px 37px;
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  @include vp-767 {
+    padding: 39px 74px 44px;
+    height: auto;
+    margin: 0;
+  }
+
+  dt {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      margin-left: -4px;
+      margin-bottom: 11px;
+      font-size: 22px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 7px;
+    }
+  }
+
+  span {
+    margin-bottom: 0;
+    font-size: 74px;
+    line-height: 74px;
+
+    @include vp-1199 {
+      margin-bottom: -6px;
+    }
+
+    @include vp-767 {
+      margin-bottom: -10px;
+    }
+  }
+
+  dd {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
