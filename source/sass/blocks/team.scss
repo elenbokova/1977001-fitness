@@ -38,6 +38,33 @@
   }
 }
 
+/* No JS */
+
+.team[data-js="no-js"] {
+  .team__button-prev,
+  .team__button-next {
+    display: none;
+  }
+
+  .team__slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @include vp-1199 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-575 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 .team__slider {
   @include vp-1199 {
     margin: 0 56px;
@@ -64,20 +91,24 @@
     aspect-ratio: 226 / 274;
   }
 
-  h3 {
-    margin: 0;
-    margin-top: auto;
-    align-self: center;
-  }
-
   &:hover,
   &:focus {
     .team__slide-info {
-      background-color: $color-sapphire-transparent;
+      background-color: $color-dark-sapphire-transparent;
     }
 
     h3 {
-      margin-top: 30px;
+      margin-top: 27px;
+
+      @include vp-1199 {
+        margin-left: -8px;
+      }
+
+
+      @include vp-767 {
+        margin-top: 18px;
+        margin-left: 0;
+      }
     }
 
     p,
@@ -111,31 +142,63 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow: auto;
   z-index: 1;
+}
+
+
+.team__slide-info h3 {
+  margin: 0;
+  margin-top: auto;
+  align-self: center;
+  font-size: 18px;
+  line-height: 23px;
+
+  @include vp-1199 {
+    margin-left: 8px;
+  }
 }
 
 .team__slide-info p {
   display: none;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 31px;
   align-self: center;
   font-size: 16px;
   line-height: 24px;
   align-items: center;
   color: $color-spindle;
+
+  @include vp-1199 {
+    margin-left: -8px;
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-bottom: 33px;
+  }
 }
 
 .team__slide-info ul {
   display: none;
-  max-width: 70%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  margin-left: 21.5%;
+
+  @include vp-1199 {
+    margin-left: 20%;
+  }
+
+  @include vp-1199 {
+    margin-left: 13%;
+  }
 }
 
 .team__slide-info li {
   margin-bottom: 14px;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -145,6 +208,7 @@
 .team__button-prev,
 .team__button-next {
   top: 64%;
+  color: $color-spindle;
 
   @include vp-1199 {
     top: 61%;
@@ -158,11 +222,16 @@
       height: 19px;
     }
   }
+
+  @include hover-focus {
+    color: $color-default-navy;
+  }
 }
 
 .team__button-prev {
   left: -2px;
   right: auto;
+  margin-left: 4px;
 
   @include vp-1199 {
     left: 39px;
@@ -176,6 +245,7 @@
 .team__button-next {
   right: -2px;
   left: auto;
+  margin-right: 4px;
 
   @include vp-1199 {
     right: 39px;

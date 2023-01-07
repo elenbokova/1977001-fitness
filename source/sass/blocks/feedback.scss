@@ -1,5 +1,5 @@
 .feedback {
-  padding: 0 0 121px;
+  padding: 0 0 120px;
 
   @include vp-1199 {
     padding-bottom: 100px;
@@ -11,7 +11,7 @@
 }
 
 .feedback h2 {
-  margin: 0  0 37px 8px;
+  margin: 0 0 37px 8px;
   font-family: $ff-custom;
   font-weight: 600;
   font-size: 54px;
@@ -20,16 +20,30 @@
   text-align: center;
 
   @include vp-1199 {
-    margin-bottom: 40px;
-    margin-left: -4px;
+    margin: 0 0 40px -4px;
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
     font-size: 32px;
     line-height: 38px;
+  }
+}
+
+/* No JS */
+
+.feedback[data-js="no-js"] {
+  .feedback__button-prev,
+  .feedback__button-next {
+    display: none;
+  }
+
+  .feedback__slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -59,7 +73,7 @@
 
   @include vp-767 {
     width: 78.5%;
-    padding: 40px 25px;
+    padding: 40px 25px 38px;
     grid-template-columns: 86px auto;
     gap: 15px;
     align-items: center;
@@ -105,12 +119,17 @@
 .feedback__button-prev,
 .feedback__button-next {
   top: 50%;
+  color: $color-spindle;
 
   @include vp-767 {
     svg {
       width: 10px;
       height: 19px;
     }
+  }
+
+  @include hover-focus {
+    color: $color-default-navy;
   }
 }
 

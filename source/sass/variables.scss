@@ -19,6 +19,8 @@ $color-torch-red:                   #ed0233;
 $color-ghost-white:                 #f8f9fc;
 $color-whisper:                     #e8e8e8;
 $color-spindle:                     #b6bdcc;
+$color-light-slate-grey:            #74819c;
+$color-dark-sapphire-transparent:   rgba(16, 38, 84, 0.89);
 $color-dark-cerulean:               rgba(20, 54, 122, 0.5);
 $color-sapphire-transparent:        rgba(16, 38, 84, 0.5);
 $color-grey-transparent:            rgba(120, 120, 120, 0.2);
@@ -30,6 +32,7 @@ $color-crimson-transparent:         rgba(209, 10, 66, 0.2);
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $custom-red-to-right:               linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 $custom-blue-to-left:               linear-gradient(142.51deg, #d10a42 0%, #0041ca 45%);
+$custom-faded-blue-to-right:        linear-gradient(90.92deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
 
 $custom-conic-desktop:              conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $custom-conic-tablet:               conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
@@ -46,7 +49,7 @@ $fz-default:                        16px;
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 $ff-default:                        "Roboto Condensed", "Arial", sans-serif;
 $ff-custom:                         "Alumni Sans", "Arial", sans-serif;
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -66,6 +69,7 @@ $trans-600:                         0.6s $tf-default;
 
 $vp-320:                            320px;
 $vp-375:                            375px;
+$vp-576:                            576px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
 $vp-1200:                           1200px;

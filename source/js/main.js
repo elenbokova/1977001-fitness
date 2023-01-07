@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {findVideos} from './modules/video';
 import {initMultipleSlider} from './modules/multiple-slider';
 import {initSingleSlider} from './modules/single-slider';
+import {initTabs} from './modules/tabs';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initTabs();
     initMultipleSlider();
     initSingleSlider();
   });

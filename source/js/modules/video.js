@@ -30,8 +30,7 @@ const initVideo = (video) => {
     video.appendChild(iframe);
   });
 
-  // link.removeAttribute('href');
-  // video.classList.add('video--enabled');
+  link.removeAttribute('href');
 };
 
 const findVideos = () => {

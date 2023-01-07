@@ -93,6 +93,7 @@
 }
 
 .event__heading dd {
+  position: relative;
   margin: 0;
 
   &:not(:last-child) {
@@ -101,6 +102,16 @@
     @include vp-1199 {
       margin-bottom: 5px;
     }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: -4px;
+    background-color: $color-default-white;
   }
 
   time {
@@ -145,7 +156,7 @@
   }
 }
 
-.event__info a {
+.event__info .button {
   width: 100%;
   min-height: 69px;
   margin-top: auto;
@@ -157,5 +168,9 @@
     font-size: 10px;
     line-height: 12px;
     border-width: 2px;
+  }
+
+  @include hover-focus {
+    background-color: $color-black-russian;
   }
 }

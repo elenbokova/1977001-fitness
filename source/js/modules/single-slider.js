@@ -1,8 +1,11 @@
 import '../vendor/swiper.js';
 
+const feedback = document.querySelector('[data-id="feedback"]');
 let swiper;
 
 const initSingleSlider = () => {
+
+  feedback.dataset.js = '';
 
   swiper = new window.Swiper('.feedback__slider', {
 

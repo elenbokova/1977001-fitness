@@ -1,0 +1,281 @@
+.contacts {
+  @include vp-767 {
+    margin-bottom: -3px;
+  }
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-left: 0;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+
+  font-family: $ff-custom;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.contacts__form-wrapper {
+  max-width: 410px;
+  margin-right: 170px;
+  margin-left: auto;
+
+  @include vp-1279 {
+    margin-right: 18%;
+  }
+
+  @include vp-1199 {
+    max-width: 61.5%;
+    margin-right: auto;
+    margin-left: 17.5%;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+.contacts__form,
+.contacts__content {
+  padding: 57px 0 48px;
+
+  @include vp-1199 {
+    padding-top: 61px;
+    padding-bottom: 66px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 66px;
+  }
+}
+
+.contacts__form {
+  color: $color-default-white;
+  background-color: $color-default-navy;
+
+  @include vp-1199 {
+    margin-left: -2px;
+  }
+}
+
+.contacts__form h2 {
+  margin-bottom: 19px;
+  font-weight: 800;
+  line-height: 80px;
+
+  @include vp-1199 {
+    margin-bottom: 32px;
+    font-weight: 600;
+  }
+
+  @include vp-767 {
+    margin-bottom: 37px;
+  }
+}
+
+.contacts__form fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 27px;
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @include vp-1199 {
+    gap: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    margin-left: 2px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.contacts__form input {
+  width: 100%;
+  padding: 6px 0;
+  border: none;
+  border-bottom: 1px solid $color-light-slate-grey;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-whisper;
+  background-color: $color-transparent;
+
+  @include vp-767 {
+    padding: 5px 0;
+  }
+
+  @include hover {
+    background-color: $color-grey-transparent;
+  }
+}
+
+.contacts__form input::placeholder {
+  color: $color-default-white;
+}
+
+.contacts__form .button {
+  width: 100%;
+  padding: 16px;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  @include vp-1199 {
+    font-size: 14px;
+  }
+
+  @include hover-focus {
+    background-image: $custom-faded-blue-to-right;
+    opacity: 1;
+  }
+}
+
+.contacts__content {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 0;
+    background-color: $color-light-slate-grey;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.contacts__content h2 {
+  margin-bottom: 36px;
+
+  @include vp-1199 {
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
+}
+
+.contacts__content-wrapper {
+  width: 404px;
+  margin-left: 120px;
+  margin-right: auto;
+
+  @include vp-1279 {
+    margin-left: 17.5%;
+  }
+
+  @include vp-1199 {
+    width: 59%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.contacts__content-wrapper div {
+  position: relative;
+  margin-left: 4px;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    margin-left: -2px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 79%;
+    width: 1px;
+    top: 5%;
+    left: 57.5%;
+    background-color: $color-light-slate-grey;
+
+    @include vp-1199 {
+      left: 58.5%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts__content dl {
+  margin: 0;
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contacts__content dt {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.contacts__content dd {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 21px;
+
+  @include vp-1199 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 27px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contacts__content address {
+  font-style: normal;
+}
