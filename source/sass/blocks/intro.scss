@@ -22,9 +22,6 @@
   @include vp-1199 {
     grid-template-columns: 324px auto;
     gap: 30px;
-  }
-
-  @include vp-767 {
     justify-content: center;
   }
 }
