@@ -14,7 +14,6 @@ const initSingleSlider = () => {
     allowTouchMove: true,
     slidesPerView: 1,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.feedback__button-next',
       prevEl: '.feedback__button-prev',

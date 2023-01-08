@@ -4,6 +4,7 @@ import {findVideos} from './modules/video';
 import {initMultipleSlider} from './modules/multiple-slider';
 import {initSingleSlider} from './modules/single-slider';
 import {initTabs} from './modules/tabs';
+import {initPhoneCheck} from './modules/form-check';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initMultipleSlider();
     initSingleSlider();
+    initPhoneCheck();
   });
 });
 

@@ -47,6 +47,10 @@
   }
 }
 
+.feedback__slide {
+  height: auto;
+}
+
 .feedback__slider {
   position: relative;
   width: 80%;
@@ -58,10 +62,12 @@
 
 .feedback__card {
   width: 60.5%;
+  height: 100%;
   margin: 0 auto;
   padding: 62px 62px 53px;
   display: grid;
   grid-template-columns: 80px auto;
+  grid-auto-rows: min-content;
   column-gap: 28px;
   color: $color-default-white;
   background-color: $color-resolution-blue;

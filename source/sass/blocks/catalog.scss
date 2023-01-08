@@ -238,7 +238,8 @@
 
   &:hover,
   &:focus,
-  &:focus-within {
+  &:focus-within,
+  &:active {
     border-image: $custom-red-to-right 1;
 
     a {

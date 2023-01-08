@@ -17,7 +17,7 @@
   padding: 10px 0;
   flex-shrink: 0;
 
-  & img {
+  img {
     @include vp-1199 {
       width: 82px;
       height: 18px;
@@ -27,6 +27,20 @@
       width: 69px;
       height: 24px;
     }
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  @include vp-1199 {
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    margin-top: 12px;
   }
 }
 
@@ -41,14 +55,12 @@
   transition: opacity $trans-medium;
 
   @include vp-1199 {
-    margin-top: 5px;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.02em;
   }
 
   @include vp-767 {
-    margin-top: 12px;
     font-size: 20px;
     line-height: 24px;
   }

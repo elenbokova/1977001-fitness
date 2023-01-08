@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Фитнесс-клуб: тренажёрный зал, групповые занятия, кардио-зона">
   <title>Supergym. Фитнесс-клуб в Омске</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -23,23 +23,29 @@
         <a class="header__logo">
           <img src="img/logo.svg" width="122" height="44" alt="Логотип фитнес-клуба Supergym.">
         </a>
-        <a class="header__phone" href="tel:+78005555555">
-          8-800-555-55-55
-        </a>
+        <div class="header__menu">
+          <a class="header__phone" href="tel:+78005555555">
+            8-800-555-55-55
+          </a>
+        </div>
       </div>
     </header>
     <main class="main">
-      <section class="intro ">
-        <div class="container">
-          <ul>
-            <li>Тренажёрный зал</li>
-            <li>Групповые занятия</li>
-            <li>Кардио-зона</li>
-          </ul>
-          <div>
-            <p>Омск</p>
-            <h1>Фитнес<br>центр</h1>
-            <button class="button button--white" type="button">Купить абонемент</button>
+      <section class="intro">
+        <div class="container intro__container">
+          <div class="intro__info">
+            <div class="intro__info-wrapper">
+              <ul>
+                <li>Тренажёрный зал</li>
+                <li>Групповые занятия</li>
+                <li>Кардио-зона</li>
+              </ul>
+              <div>
+                <p>Омск</p>
+                <h1>Фитнес<br>центр</h1>
+              </div>
+            </div>
+            <a class="button button--white" href="#catalog">Купить абонемент</a>
           </div>
           <picture>
             <source srcset="img/intro.webp 1x, img/intro@2x.webp 2x" type="image/webp">
@@ -70,7 +76,7 @@
               </picture>
             </div>
             <div class="about__video-container" data-name="video-container">
-              <a href=https://www.youtube.com/watch?v=9TZXsZItgdw data-name="video-link" data-id="9TZXsZItgdw">
+              <a href=https://youtu.be/9TZXsZItgdw data-name="video-link" data-id="9TZXsZItgdw">
                 <picture>
                   <source srcset="img/about-video-preview.webp 1x, img/about-video-preview@2x.webp 2x"
                     type="image/webp">
@@ -87,12 +93,12 @@
                   <defs>
                     <linearGradient id="paint0_linear_7653_167" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444"
                       gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#ED0233" />
+                      <stop stop-color="#ED0233" offset="0" />
                       <stop offset="1" stop-color="#003EB7" />
                     </linearGradient>
                     <linearGradient id="paint1_linear_7653_167" x1="14" y1="49.52" x2="54.1858" y2="9.18415"
                       gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#003D85" />
+                      <stop stop-color="#003D85" offset="0" />
                       <stop offset="0.885417" stop-color="#B80027" />
                     </linearGradient>
                   </defs>
@@ -102,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="catalog" data-id="catalog" data-js="no-js">
+      <section class="catalog" id="catalog" data-id="catalog" data-js="no-js">
         <div class="container">
           <h2>Абонементы</h2>
           <ul data-tab-controls>
@@ -235,7 +241,7 @@
         </div>
         <picture>
           <source srcset="img/weights.webp 1x, img/weights@2x.webp 2x" type="image/webp">
-          <img src="img/weights.png" srcset="img/weights@2x.png" alt="Диски для штанги" width="470" height="494"
+          <img src="img/weights.png" srcset="img/weights@2x.png" alt="Диски для штанги." width="470" height="494"
             loading="lazy">
         </picture>
       </section>
@@ -262,13 +268,13 @@
             <a class="button button--white" href="#">Заполнить заявку</a>
           </div>
           <picture>
-            <source srcset="img/event.webp 1x, img/event@2x.webp 2x" type="event/webp">
-            <img src="img/event.jpg" srcset="img/event@2x.jpg 2x" alt="Фото спортсмена на старте" width="660"
+            <source srcset="img/event.webp 1x, img/event@2x.webp 2x" type="image/webp">
+            <img src="img/event.jpg" srcset="img/event@2x.jpg 2x" alt="Фото спортсмена на старте." width="660"
               height="500" loading="lazy">
           </picture>
         </div>
       </section>
-      <section class="team" data-id="team" data-js="no-js">
+      <section class="team" id="team" data-id="team" data-js="no-js">
         <div class="container">
           <h2>Тренеры</h2>
           <div class="swiper team__slider">
@@ -286,7 +292,7 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg" alt="Фото тренера" width="260"
+                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg" alt="Фото тренера." width="260"
                     height="294">
                 </picture>
               </div>
@@ -302,8 +308,8 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg" alt="Фото тренера" width="260" height="294"
-                    loading="lazy">
+                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg" alt="Фото тренера." width="260"
+                    height="294" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide team__slide" tabindex="0">
@@ -318,8 +324,8 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-3.webp 1x, img/trainer-3@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg" alt="Фото тренера" width="260" height="294"
-                    loading="lazy">
+                  <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg" alt="Фото тренера." width="260"
+                    height="294" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide team__slide" tabindex="0">
@@ -334,8 +340,8 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-4.webp 1x, img/trainer-4@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg" alt="Фото тренера" width="260" height="294"
-                    loading="lazy">
+                  <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg" alt="Фото тренера." width="260"
+                    height="294" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide team__slide" tabindex="0">
@@ -366,8 +372,8 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg" alt="Фото тренера" width="260" height="294"
-                    loading="lazy">
+                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg" alt="Фото тренера." width="260"
+                    height="294" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide team__slide" tabindex="0">
@@ -398,8 +404,8 @@
                 </div>
                 <picture>
                   <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
-                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg" alt="Фото тренера" width="260" height="294"
-                    loading="lazy">
+                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg" alt="Фото тренера." width="260"
+                    height="294" loading="lazy">
                 </picture>
               </div>
             </div>
@@ -452,13 +458,13 @@
           </div>
         </div>
       </section>
-      <section class="promo">
+      <section class="promo" id="promo">
         <div class="container">
           <h2>Акции</h2>
           <div class="promo__wrapper">
             <article class="promo__main">
               <div>
-                <h3>Год<b>4999</b></h3>
+                <h3>Год <b>4999</b></h3>
                 <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
                 <a href="#">Подробнее</a>
               </div>
@@ -472,12 +478,12 @@
               <article>
                 <h3>Месяц бесплатно</h3>
                 <p>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</p>
-                <a href="">Подробнее</a>
+                <a href="#">Подробнее</a>
               </article>
               <article>
                 <h3>Скидка 20%</h3>
                 <p>Корпоративный фитнес с&nbsp;командой</p>
-                <a href="">Подробнее</a>
+                <a href="#">Подробнее</a>
               </article>
             </div>
           </div>
@@ -547,8 +553,8 @@
                   </label>
                   <label>
                     <span class="visually-hidden">Телефон</span>
-                    <input type="tel" data-phone-input id="phone" name="phone" placeholder="Телефон" minlength="15"
-                      maxlength="18" required>
+                    <input type="tel" data-phone-input id="phone" name="phone" placeholder="Телефон"
+                      minlength="11" maxlength="15" required>
                   </label>
                 </fieldset>
                 <button class="button button--white" type="submit">Отправить</button>
@@ -602,13 +608,13 @@
               <a class="footer__nav-link" href="#">Услуги</a>
             </li>
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Абонементы</a>
+              <a class="footer__nav-link" href="#catalog">Абонементы</a>
             </li>
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Акции</a>
+              <a class="footer__nav-link" href="#promo">Акции</a>
             </li>
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Тренеры</a>
+              <a class="footer__nav-link" href="#team">Тренеры</a>
             </li>
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="#">Расписание</a>
@@ -634,7 +640,7 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://www.reddit.com/">
+              <a class="footer__social-link" href="https://reddit.com/">
                 <svg width="14" height="14">
                   <use xlink:href="img/sprite.svg#icon-reddit"></use>
                 </svg>
@@ -646,7 +652,6 @@
       </div>
     </footer>
   </div>
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

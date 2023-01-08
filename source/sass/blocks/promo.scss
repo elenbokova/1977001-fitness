@@ -76,7 +76,7 @@
     object-fit: cover;
     height: 100%;
     aspect-ratio: 280 / 462;
-    object-position: 26% top;
+    object-position: 33% top;
 
     @include vp-1199 {
       width: 100%;
@@ -86,6 +86,7 @@
 
     @include vp-767 {
       aspect-ratio: 290 / 299;
+      object-position: 33% 7%;
     }
   }
 }
@@ -100,50 +101,50 @@
   @include vp-767 {
     text-align: center;
   }
+}
 
-  h3 {
-    margin: 0;
-    margin-bottom: 18px;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 28px;
+.promo__main h3 {
+  margin: 0;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
 
-    @include vp-767 {
-      margin-bottom: 14px;
-    }
+  @include vp-767 {
+    margin-bottom: 14px;
   }
+}
 
-  b {
-    display: block;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 70px;
+.promo__main b {
+  display: block;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+.promo__main p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+
+  @include vp-767 {
+    margin-bottom: 30px;
   }
+}
 
-  p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 25px;
+.promo__main a {
+  margin-top: auto;
+  font-size: 14px;
+  color: $color-default-white;
 
-    @include vp-767 {
-      margin-bottom: 30px;
-    }
-  }
-
-  a {
-    margin-top: auto;
-    font-size: 14px;
-    color: $color-default-white;
-
-    @include vp-767 {
-      align-self: center;
-    }
+  @include vp-767 {
+    align-self: center;
   }
 }
 
 .promo__others {
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax (1fr, auto);
   row-gap: 40px;
 
   @include vp-1199 {
@@ -171,29 +172,30 @@
     padding: 37px;
     text-align: center;
   }
+}
 
-  h3 {
-    margin: 0;
-    margin-bottom: 7px;
-    font-weight: 700;
-    font-size: 26px;
+.promo__others h3 {
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 26px;
 
-    @include vp-767 {
-      margin-bottom: 9px;
-    }
+  @include vp-767 {
+    margin-bottom: 9px;
   }
+}
 
-  p {
-    margin: 0;
-    font-size: 16px;
-  }
+.promo__others p {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
 
-  a {
-    margin-top: auto;
-    color: $color-resolution-blue;
+.promo__others a {
+  margin-top: auto;
+  color: $color-resolution-blue;
 
-    @include vp-767 {
-      align-self: center;
-    }
+  @include vp-767 {
+    align-self: center;
   }
 }
