@@ -73,7 +73,7 @@
   }
 
   &:last-child,
-  &:nth-last-child(2) {
+  &:nth-child(4n) {
     align-items: end;
 
     @include vp-767 {
@@ -95,7 +95,7 @@
     }
   }
 
-  &:nth-last-child(2) {
+  &:nth-child(4n) {
     &::before {
       left: -20px;
     }

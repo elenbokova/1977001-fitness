@@ -1591,6 +1591,26 @@ button,
   display: none;
 }
 
+.modal--responsive .modal__content {
+  width: 100%;
+}
+
+.modal--fit-content .modal__content {
+  width: auto;
+}
+
+.modal--no-scale {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.modal--preload {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
 .modal__wrapper {
   position: relative;
   display: -webkit-box;
@@ -1636,26 +1656,6 @@ button,
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
-}
-
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
 }
 
 .modal.is-active {
@@ -1795,7 +1795,7 @@ button,
   word-break: break-word;
 }
 
-.intro .button {
+.intro a {
   width: 234px;
   min-height: 59px;
   padding: 19px;
@@ -2131,7 +2131,7 @@ button,
   z-index: -1;
 }
 
-[data-tab] .button {
+[data-tab] a {
   margin-top: auto;
   width: 15vw;
   max-width: 206px;
@@ -2248,7 +2248,7 @@ button,
   line-height: 27px;
 }
 
-.event__info .button {
+.event__info a {
   width: 100%;
   min-height: 69px;
   margin-top: auto;
@@ -2259,7 +2259,7 @@ button,
   user-select: none;
 }
 
-.event__info .button.focus-visible:focus {
+.event__info a.focus-visible:focus {
   background-color: #030a1a;
 }
 
@@ -2461,14 +2461,14 @@ button,
 }
 
 .benefits dl:last-child,
-.benefits dl:nth-last-child(2) {
+.benefits dl:nth-child(4n) {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
 }
 
 .benefits dl:last-child::before,
-.benefits dl:nth-last-child(2)::before {
+.benefits dl:nth-child(4n)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2478,7 +2478,7 @@ button,
   background-color: rgba(209, 10, 66, 0.2);
 }
 
-.benefits dl:nth-last-child(2)::before {
+.benefits dl:nth-child(4n)::before {
   left: -20px;
 }
 
@@ -2876,7 +2876,7 @@ button,
   color: #ffffff;
 }
 
-.contacts__form .button {
+.contacts__form button {
   width: 100%;
   padding: 16px;
   font-size: 15px;
@@ -2884,7 +2884,7 @@ button,
   letter-spacing: 0.05em;
 }
 
-.contacts__form .button.focus-visible:focus {
+.contacts__form button.focus-visible:focus {
   background-image: -o-linear-gradient(359.08deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
   background-image: linear-gradient(90.92deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
   opacity: 1;
@@ -3172,7 +3172,7 @@ button,
     text-transform: none;
   }
 
-  .intro .button {
+  .intro a {
     width: 57%;
   }
 
@@ -3310,7 +3310,7 @@ button,
     padding-bottom: 59px;
   }
 
-  [data-tab] .button {
+  [data-tab] a {
     width: 27vw;
     max-width: none;
   }
@@ -3361,7 +3361,7 @@ button,
     line-height: 18px;
   }
 
-  .event__info .button {
+  .event__info a {
     min-height: 39px;
     font-size: 10px;
     line-height: 12px;
@@ -3449,7 +3449,7 @@ button,
   }
 
   .benefits dl:last-child::before,
-  .benefits dl:nth-last-child(2)::before {
+  .benefits dl:nth-child(4n)::before {
     display: none;
   }
 
@@ -3579,7 +3579,7 @@ button,
     gap: 60px;
   }
 
-  .contacts__form .button {
+  .contacts__form button {
     font-size: 14px;
   }
 
@@ -3654,6 +3654,10 @@ button,
     padding: 0 15px;
   }
 
+  .modal--fit-content .modal__content {
+    width: 100%;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -3661,10 +3665,6 @@ button,
   .modal__content {
     width: 100%;
     padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
   }
 
   .header {
@@ -3719,7 +3719,7 @@ button,
     letter-spacing: 0.03em;
   }
 
-  .intro .button {
+  .intro a {
     position: absolute;
     width: calc(100% - 30px);
     left: 15px;
@@ -3857,7 +3857,7 @@ button,
     line-height: 120px;
   }
 
-  [data-tab] .button {
+  [data-tab] a {
     width: 82%;
   }
 
@@ -3972,7 +3972,7 @@ button,
   }
 
   .benefits dl:last-child,
-  .benefits dl:nth-last-child(2) {
+  .benefits dl:nth-child(4n) {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -4261,7 +4261,7 @@ button,
     color: #102654;
   }
 
-  .event__info .button:hover:not(.focus-visible) {
+  .event__info a:hover:not(.focus-visible) {
     background-color: #030a1a;
   }
 
@@ -4283,7 +4283,7 @@ button,
     background-color: rgba(120, 120, 120, 0.2);
   }
 
-  .contacts__form .button:hover:not(.focus-visible) {
+  .contacts__form button:hover:not(.focus-visible) {
     background-image: -o-linear-gradient(359.08deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
     background-image: linear-gradient(90.92deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
     opacity: 1;
