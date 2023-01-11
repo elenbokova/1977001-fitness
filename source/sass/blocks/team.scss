@@ -185,10 +185,10 @@
   margin-left: 21.5%;
 
   @include vp-1199 {
-    margin-left: 20%;
+    margin-left: 21%;
   }
 
-  @include vp-1199 {
+  @include vp-767 {
     margin-left: 13%;
   }
 }

@@ -8,11 +8,6 @@ const getInputNumbersValue = (value) => {
 const onPhoneInput = (evt) => {
   let input = evt.target;
   input.value = getInputNumbersValue(input.value);
-  if (input.value.length < 11) {
-    input.setCustomValidity('Пожалуйста, введите номер телефона полностью');
-  } else {
-    input.setCustomValidity('');
-  }
 };
 
 const initPhoneCheck = () => {

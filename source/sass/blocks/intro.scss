@@ -139,6 +139,7 @@
   justify-content: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  user-select: none;
 
   @include vp-1199 {
     width: 57%;

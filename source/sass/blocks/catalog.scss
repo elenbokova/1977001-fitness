@@ -111,17 +111,21 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 343px;
+  min-width: 343px;
+  max-width: fit-content;
   margin: 0 auto;
   margin-bottom: 50px;
+  gap: 30px;
+  flex-wrap: wrap;
 
   @include vp-1199 {
-    width: 334px;
+    min-width: 49%;
     margin-bottom: 53px;
   }
 
   @include vp-767 {
-    width: 100%;
+    min-width: fit-content;
+    max-width: 100%;
     margin-bottom: 50px;
   }
 
@@ -252,6 +256,7 @@
 }
 
 [data-tab] dl {
+  margin: 0;
   margin-bottom: 67px;
 
   @include vp-767 {

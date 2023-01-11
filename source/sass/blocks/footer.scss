@@ -1,6 +1,6 @@
 .footer {
   margin-top: auto;
-  padding: 45px 0 32px;
+  padding: 45px 0 45px;
   background-color: $color-black-russian;
 
   @include vp-1199 {
@@ -22,10 +22,11 @@
 }
 
 .footer__nav {
-  max-width: 80%;
+  position: relative;
+  width: 80%;
 
-  @include vp-767 {
-    max-width: 70%;
+  @include vp-1199 {
+    width: 84%;
   }
 
   @include vp-767 {
@@ -35,22 +36,25 @@
 
 .footer__nav-list {
   margin: 0;
+  margin-top: 3px;
+  margin-left: 39%;
   padding: 0;
   list-style-type: none;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  column-gap: 40px;
   row-gap: 15px;
 
   @include vp-1199 {
-    gap: 30px;
+    margin-left: 25%;
+    row-gap: 30px;
   }
 
   @include vp-767 {
+    margin: 0;
     display: block;
     column-count: 2;
-    column-gap: 115px;
+    column-gap: 80px;
   }
 }
 
@@ -73,19 +77,32 @@
   display: flex;
   align-items: center;
 
+  &:not(:first-child) {
+    margin-right: 41px;
+
+    @include vp-1199 {
+      margin-right: 30px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
   @include vp-767 {
     margin-bottom: 23px;
   }
 }
 
 .footer__logo {
+  position: absolute;
   padding: 10px 0;
-  margin-right: 17em;
+  left: 0;
+  top: -2px;
   flex-shrink: 0;
 
   @include vp-1199 {
-    margin-top: -13px;
-    margin-right: 4vw;
+    top: -11px;
 
     img {
       width: 82px;
@@ -94,6 +111,8 @@
   }
 
   @include vp-767 {
+    position: relative;
+    top: 0;
     margin-right: 0;
     margin-top: -8px;
     margin-bottom: -7px;

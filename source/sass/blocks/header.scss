@@ -16,6 +16,7 @@
 .header__logo {
   padding: 10px 0;
   flex-shrink: 0;
+  margin-right: 15px;
 
   img {
     @include vp-1199 {
@@ -53,6 +54,7 @@
   letter-spacing: 0.03em;
   color: $color-default-white;
   transition: opacity $trans-medium;
+  word-break: break-word;
 
   @include vp-1199 {
     font-size: 24px;
